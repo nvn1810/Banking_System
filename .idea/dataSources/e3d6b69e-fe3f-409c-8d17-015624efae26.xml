@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="BankDatabase">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.9">
+    <root id="1">
+      <ServerVersion>11.2.0.2</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="BDB">
+      <ObjectId>50</ObjectId>
+      <IntrospectionTimestamp>2018-08-17.18:48:47</IntrospectionTimestamp>
+      <CreatedTimestamp>2018-08-17.18:12:46</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:48:47</ModifiedTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="CTXSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="XDB">
+      <ObjectId>34</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="ANONYMOUS">
+      <ObjectId>35</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="MDSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="HR">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="FLOWS_FILES">
+      <ObjectId>44</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="APEX_040000">
+      <ObjectId>47</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="BOOKS_ADMIN">
+      <ObjectId>48</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="BANKDB">
+      <ObjectId>49</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <table id="18" parent="2" name="ACCOUNTS">
+      <ObjectId>20064</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:30:18</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:45:28</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="19" parent="2" name="BANK">
+      <ObjectId>20062</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:28:40</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:45:45</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="20" parent="2" name="BENEFICIARIES">
+      <ObjectId>20066</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:31:34</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:32:37</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="21" parent="2" name="CUSTOMERS">
+      <ObjectId>20053</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:12:46</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:41:31</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="22" parent="2" name="TRANSACTIONS">
+      <ObjectId>20068</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:33:20</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:48:47</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <column id="23" parent="18" name="ACCOUNT_NUMBER">
+      <Position>1</Position>
+      <DataType>NUMBER(16 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="18" name="CUSTOMER_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(6 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>NULL </DefaultExpression>
+    </column>
+    <column id="25" parent="18" name="BALANCE">
+      <Position>3</Position>
+      <DataType>NUMBER(20 digit)|0s</DataType>
+    </column>
+    <column id="26" parent="18" name="IFSC">
+      <Position>4</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>NULL </DefaultExpression>
+    </column>
+    <column id="27" parent="18" name="ADDRESS">
+      <Position>5</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>NULL </DefaultExpression>
+    </column>
+    <column id="28" parent="18" name="ATYPE">
+      <Position>6</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="29" parent="18" name="TRANS_PASSWORD">
+      <Position>7</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <index id="30" parent="18" name="ACCOUNTS_PK">
+      <ObjectId>20065</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:30:53</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:30:53</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>ACCOUNT_NUMBER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="18" name="ACCOUNTS_PK">
+      <ModifiedTimestamp>2018-08-17.18:31:03</ModifiedTimestamp>
+      <ColNames>ACCOUNT_NUMBER</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>ACCOUNTS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="32" parent="18" name="CUSTOMER_ID_FK">
+      <ModifiedTimestamp>2018-08-17.18:43:30</ModifiedTimestamp>
+      <ColNames>CUSTOMER_ID</ColNames>
+      <RefSchemaName>BDB</RefSchemaName>
+      <RefTableName>CUSTOMERS</RefTableName>
+      <RefKeyName>CUSTOMERS_PK</RefKeyName>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="33" parent="18" name="ACCOUNTS_BANK_IFSC_FK">
+      <ModifiedTimestamp>2018-08-17.18:45:28</ModifiedTimestamp>
+      <ColNames>IFSC</ColNames>
+      <RefSchemaName>BDB</RefSchemaName>
+      <RefTableName>BANK</RefTableName>
+      <RefKeyName>SYS_C007006</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="34" parent="19" name="IFSC">
+      <Position>1</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="19" name="NCUSTOMERS">
+      <Position>2</Position>
+      <DataType>NUMBER(4 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>NULL </DefaultExpression>
+    </column>
+    <column id="36" parent="19" name="ADDRESS">
+      <Position>3</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>NULL </DefaultExpression>
+    </column>
+    <index id="37" parent="19" name="SYS_C007006">
+      <ObjectId>20063</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-08-17.18:29:23</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:29:23</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>IFSC</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="38" parent="19" name="SYS_C007006">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2018-08-17.18:29:23</ModifiedTimestamp>
+      <ColNames>IFSC</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C007006</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="20" name="CUSTOMER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(6 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="20" name="ACCOUNT_NUMBER">
+      <Position>2</Position>
+      <DataType>NUMBER(16 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="20" name="NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(40 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="20" name="IFSC">
+      <Position>4</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="43" parent="20" name="BENEFICIARIES_PK">
+      <ObjectId>20067</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:32:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:32:06</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>CUSTOMER_ID
+ACCOUNT_NUMBER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="20" name="BENEFICIARIES_PK">
+      <ModifiedTimestamp>2018-08-17.18:32:37</ModifiedTimestamp>
+      <ColNames>CUSTOMER_ID
+ACCOUNT_NUMBER</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>BENEFICIARIES_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="45" parent="21" name="CUSTOMER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(6 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="21" name="FIRST_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="21" name="LAST_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(25 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="21" name="EMAIL">
+      <Position>4</Position>
+      <DataType>VARCHAR2(25 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="21" name="PHONE_NUMBER">
+      <Position>5</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="21" name="AGE">
+      <Position>6</Position>
+      <DataType>NUMBER(2 digit)|0s</DataType>
+      <DefaultExpression>25</DefaultExpression>
+    </column>
+    <column id="51" parent="21" name="GENDER">
+      <Position>7</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="52" parent="21" name="PASSWORD">
+      <Position>8</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>12345</DefaultExpression>
+    </column>
+    <column id="53" parent="21" name="OLD_PASSWORD">
+      <Position>9</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>00000
+</DefaultExpression>
+    </column>
+    <index id="54" parent="21" name="EMP_EMP_ID_PK">
+      <ObjectId>20058</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:23:11</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:23:11</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>CUSTOMER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="55" parent="21" name="EMP_EMAIL_UK">
+      <ObjectId>20059</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:23:52</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:23:52</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>EMAIL</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="56" parent="21" name="EMP_NAME_IX">
+      <ObjectId>20060</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:24:22</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:24:22</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>LAST_NAME
+FIRST_NAME</ColNames>
+    </index>
+    <key id="57" parent="21" name="CUSTOMERS_PK">
+      <ModifiedTimestamp>2018-08-17.18:41:31</ModifiedTimestamp>
+      <ColNames>CUSTOMER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>EMP_EMP_ID_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="58" parent="21" name="CUSTOMER_EMAIL_UK">
+      <ModifiedTimestamp>2018-08-17.18:26:50</ModifiedTimestamp>
+      <ColNames>EMAIL</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>EMP_EMAIL_UK</UnderlyingIndexName>
+    </key>
+    <check id="59" parent="21" name="CUSTOMER_LAST_NAME_NN">
+      <ModifiedTimestamp>2018-08-17.18:26:50</ModifiedTimestamp>
+      <ColNames>LAST_NAME</ColNames>
+      <Predicate>&quot;LAST_NAME&quot; IS NOT NULL</Predicate>
+    </check>
+    <check id="60" parent="21" name="CUSTOMER_EMAIL_NN">
+      <ModifiedTimestamp>2018-08-17.18:26:50</ModifiedTimestamp>
+      <ColNames>EMAIL</ColNames>
+      <Predicate>&quot;EMAIL&quot; IS NOT NULL</Predicate>
+    </check>
+    <trigger id="61" parent="21" name="SECURE_EMPLOYEES">
+      <ObjectId>20061</ObjectId>
+      <Invalid>1</Invalid>
+      <CreatedTimestamp>2018-08-17.18:25:08</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:25:08</ModifiedTimestamp>
+      <Events>IUD</Events>
+      <Turn>before-stmt</Turn>
+    </trigger>
+    <column id="62" parent="22" name="ACCOUNT_NUMBER">
+      <Position>1</Position>
+      <DataType>NUMBER(16 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="22" name="TID">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="22" name="TTYPE">
+      <Position>3</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="22" name="TMODE">
+      <Position>4</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="22" name="TTIMESTAMP">
+      <Position>5</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="22" name="AMOUNT">
+      <Position>6</Position>
+      <DataType>NUMBER(20 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="22" name="RREFERENCE">
+      <Position>7</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <column id="69" parent="22" name="STATUS">
+      <Position>8</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <index id="70" parent="22" name="TRANSACTIONS_PK">
+      <ObjectId>20069</ObjectId>
+      <CreatedTimestamp>2018-08-17.18:34:13</CreatedTimestamp>
+      <ModifiedTimestamp>2018-08-17.18:34:13</ModifiedTimestamp>
+      <TablespaceName>SYSTEM</TablespaceName>
+      <ColNames>TID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="22" name="TRANSACTIONS_PK">
+      <ModifiedTimestamp>2018-08-17.18:34:21</ModifiedTimestamp>
+      <ColNames>TID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>TRANSACTIONS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="72" parent="22" name="ACCOUNT_NUMBER_FK">
+      <ModifiedTimestamp>2018-08-17.18:48:47</ModifiedTimestamp>
+      <ColNames>ACCOUNT_NUMBER</ColNames>
+      <RefSchemaName>BDB</RefSchemaName>
+      <RefTableName>ACCOUNTS</RefTableName>
+      <RefKeyName>ACCOUNTS_PK</RefKeyName>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>
